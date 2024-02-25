@@ -2,6 +2,30 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
 
+## Spotify API
+
+### Register App
+https://developer.spotify.com
+
+--> Dashboard --> Create app
+
+Fill out the fields (can be edited later) then click Save.
+The Client ID and Client Secret are required for the login to work
+
+### Scopes
+All available scopes are listed here:
+https://developer.spotify.com/documentation/web-api/concepts/scopes
+
+Configure them in the `scope` property in `auth.config.ts`.
+
+
+### Config
+create src/environments/environment.development.ts - copy src/environments/environment.ts as starting point and fill in with your values 
+
+
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

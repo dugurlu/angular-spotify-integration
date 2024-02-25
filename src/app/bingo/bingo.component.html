@@ -1,0 +1,5 @@
+<p>bingo works!</p>
+<ul *ngIf="playlists$ | async as playlists">
+    <li *ngFor="let playlist of playlists">{{playlist.name}}</li>
+</ul>
+<button (click)="getPlaylists()">Get Playlists</button>
