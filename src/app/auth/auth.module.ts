@@ -3,7 +3,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthConfig, OAuthModule, OAuthModuleConfig, OAuthStorage } from 'angular-oauth2-oidc';
 import { AuthService } from './auth.service';
 import { authConfig } from './auth.config';
-import { AuthGuardService } from './auth-guard.service';
 
 
 export const storageFactory = (): OAuthStorage => {
@@ -28,7 +27,6 @@ export const authModuleConfig: OAuthModuleConfig = {
     ],
     providers: [
         AuthService,
-        AuthGuardService,
     ],
 })
 export class AuthModule {

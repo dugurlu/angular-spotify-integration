@@ -1,5 +1,7 @@
-<p>bingo works!</p>
-<ul *ngIf="playlists$ | async as playlists">
-    <li *ngFor="let playlist of playlists">{{playlist.name}}</li>
-</ul>
-<button (click)="getPlaylists()">Get Playlists</button>
+<mat-spinner *ngIf="loading$.getValue()"></mat-spinner>
+<ng-container *ngIf="playlists$ | async as playlists">
+    <div *ngIf="playlists.length > 0" class="playlist-container">
+        <app-playlist *ngFor="let playlist of playlists" [imageUrl]="playlist.images[0].url" [title]="playlist.name" [owner]="playlist.owner.display_name" />
+    </div>
+</ng-container>
+

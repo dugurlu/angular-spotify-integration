@@ -1,1 +1,10 @@
-<p>home works!</p>
+<mat-card *ngIf="!isAuthenticated">
+    <mat-card-content class="centered-card">
+        <button mat-raised-button color="primary" (click)="login()">Login via Spotify</button>
+    </mat-card-content>
+</mat-card>
+<mat-card *ngIf="isAuthenticated">
+    <mat-card-content class="centered-card">
+        <button mat-raised-button color="primary" routerLink="/bingo">Bingo</button>
+    </mat-card-content>
+</mat-card>

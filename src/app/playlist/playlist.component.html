@@ -1,1 +1,7 @@
-<p>playlist works!</p>
+<mat-card>
+    <mat-card-content class="playlist-item" *ngIf="imageUrl && owner && title">
+        <img class="playlist-image" [src]="imageUrl" [width]="200">
+        <h1 class="playlist-title">{{title}}</h1>
+        <h2 class="playlist-owner">{{owner}}</h2>
+    </mat-card-content>
+</mat-card>

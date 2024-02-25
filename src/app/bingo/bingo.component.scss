@@ -1,0 +1,9 @@
+.playlist-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.playlist-item {
+  width: 200px;
+}

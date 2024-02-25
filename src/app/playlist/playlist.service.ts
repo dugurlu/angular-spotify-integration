@@ -16,13 +16,34 @@ export class PlaylistService {
 }
 
 
-export interface PlayListItem {
-    collaborative: boolean;
-    id: string;
-    description: string;
+export interface PlayListResponse {
     name: string;
+    owner: string;
+    public: boolean;
+    total: number;
+    limit: number;
+    offset: number;
+    previous: string;
+    next: string;
+    items: Array<PlayListItem>;
 }
 
-export interface PlayListResponse {
-    items: Array<PlayListItem>;
+export interface PlayListItem {
+    id: string;
+    name: string;
+    owner: User;
+    description: string;
+    collaborative: boolean;
+    images: Array<ImageObject>;
+}
+
+export interface User {
+    id: string;
+    display_name: string;
+}
+
+export interface ImageObject {
+    url: string;
+    height: number;
+    width: number;
 }

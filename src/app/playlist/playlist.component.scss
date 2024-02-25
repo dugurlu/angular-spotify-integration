@@ -1,0 +1,19 @@
+.playlist-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playlist-image {
+  border-radius: 5px;
+}
+
+.playlist-title {
+  padding: 0;
+  margin: 0;
+}
+
+.playlist-owner {
+  padding: 0;
+  margin: 0;
+}

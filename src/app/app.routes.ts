@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
-import { AuthGuardService } from './auth/auth-guard.service';
+import { authGuard } from './auth/auth.guard';
+import { BingoComponent } from './bingo/bingo.component';
 
 export const routes: Routes = [
     {path: 'home', loadComponent: () => import('./home/home.component').then(mod => mod.HomeComponent)},
@@ -7,7 +8,8 @@ export const routes: Routes = [
     {path: 'login', loadComponent: () => import('./login/login.component').then(mod => mod.LoginComponent)},
     {
         path: 'bingo',
-        loadComponent: () => import('./bingo/bingo.component').then(mod => mod.BingoComponent),
-        canActivate: [AuthGuardService]
+        component: BingoComponent,
+        // loadComponent: () => import('./bingo/bingo.component').then(mod => mod.BingoComponent),
+        canActivate: [authGuard]
     },
 ];

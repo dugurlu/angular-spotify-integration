@@ -4,10 +4,7 @@ import { MatButton, MatFabButton, MatIconButton } from '@angular/material/button
 import { MatIcon } from '@angular/material/icon';
 import { NgOptimizedImage } from '@angular/common';
 import { AuthService } from '../auth/auth.service';
-
-const SPOTIFY_LOGO = '../assets/spotify_logo.svg';
-const SPOTIFY_ICON = '../assets/spotify_icon.svg';
-
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-login',
@@ -28,11 +25,14 @@ const SPOTIFY_ICON = '../assets/spotify_icon.svg';
 })
 export class LoginComponent {
 
-    constructor(private authService: AuthService) {
+    constructor(
+        private authService: AuthService,
+        private router: Router,
+    ) {
     }
 
     login = () => {
-        this.authService.login();
+        this.authService.login(this.router.url);
     }
 
 }
