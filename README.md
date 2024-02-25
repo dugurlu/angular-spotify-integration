@@ -15,5 +15,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Spotify Documentation
 [Web API Reference](https://developer.spotify.com/documentation/web-api)
+
 [Design Guidelines](https://developer.spotify.com/documentation/design)
 
